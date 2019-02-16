@@ -1,0 +1,29 @@
+.bg-black{
+    background-color: #212121;
+}
+
+.bg-gray{
+    background-color: #bdbdbd;
+}
+
+#content{
+    display: flex;
+    height:100vh;
+}
+
+.sidebar, .main-content{
+    height: inherit;
+}
+
+.default-content{
+    height: 100%;
+    margin-top: 50px;
+    width: 100%;
+}
+
+@media screen and (min-width:1024px){
+    .main-content{
+        width: 100%;
+        margin-left: 20vw;
+    }
+}

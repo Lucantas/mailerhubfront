@@ -1,0 +1,19 @@
+.pad-0{
+    padding:0 !important;    
+}
+
+.fit-width {
+    width:100%;
+} 
+
+.img-container{
+    margin:0 auto;
+}
+
+.m-t-15 {
+    margin-top:15;
+}
+
+.m-0{
+    margin:0;
+}

@@ -1,0 +1,15 @@
+[[menu]]
+name = "home"
+label = "início"
+
+[[menu]]
+name = "services"
+label = "serviços"
+
+[[menu]]
+name = "account"
+label = "conta"
+
+[[menu]]
+name = "addresses"
+label = "Endereços"

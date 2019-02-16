@@ -1,0 +1,18 @@
+<div id="sidebar" class="sidebar col-xs-10 bg-blue">
+   <div class="menu-flex">
+        <div class="logo">
+            <figure class="img-container">
+                <img class="fit-width" src="img/0.jpeg" alt="">
+            </figure>
+        </div>
+        <ul class="menu list-unstyled">
+            {{ range $.Site.Data.components }}
+                {{ range .menu }}
+                <li class="menu-item">
+                    <a class="c-white" href="templates/{{ .name }}/load">{{ .label }}</a>
+                </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+   </div>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ .Title }}</title>
+    {{ partial "home/default-css.html" . }}
+</head>
+<body>
+    <section id="content" class="sidebar-open container-fluid pad-0">      
+        {{ partial "components/sidebar.html" . }}  
+        <div class="main-content col-xs-12 bg-white">
+            <div class="sidebar-button bg-blue row m-0">
+                <div id="sidebarToggle" class="col-2">
+                    <i class="fas fa-bars fa-2x c-white"></i>
+                </div>
+                <div class="col-8 c-white text-center">
+                    Mailerhub
+                </div>
+            </div>
+            <div id="mainContent" class="default-content container">
+
+            </div>
+        </div>
+    </section>
+    {{ partial "home/default-js.html" . }}
+</body>
+</html>

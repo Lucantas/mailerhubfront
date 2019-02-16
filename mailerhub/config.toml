@@ -1,0 +1,4 @@
+#baseURL = "http://mailerhub/"
+languageCode = "en-us"
+title = "MailerHub"
+theme = "default"
