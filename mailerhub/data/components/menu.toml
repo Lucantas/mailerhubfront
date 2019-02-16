@@ -1,15 +1,36 @@
 [[menu]]
 name = "home"
-label = "início"
+label = "home"
 
 [[menu]]
 name = "services"
-label = "serviços"
+label = "services"
+    [[menu.sublist]]
+    name = "marketing"
+    label = "mail marketing"
+    [[menu.sublist]]
+    name = "form"
+    label = "form handler"
 
 [[menu]]
 name = "account"
-label = "conta"
+label = "Account"
+    [[menu.sublist]]
+    name = "settings"
+    label = "settings"
+    [[menu.sublist]]
+    name = "reports"
+    label = "reports"
 
 [[menu]]
 name = "addresses"
-label = "Endereços"
+label = "addresses"
+    [[menu.sublist]]
+    name = "lists"
+    label = "Lists"
+    [[menu.sublist]]
+    name = "new-list"
+    label = "New List"
+    [[menu.sublist]]
+    name = "new-address"
+    label = "New Address"
