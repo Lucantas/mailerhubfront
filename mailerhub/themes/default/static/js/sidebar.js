@@ -44,13 +44,18 @@ const SideBar = function(elm) {
                     .then((res) => { return res.text() })
                     .then((res) => {
                         const content = res;
-                        mainContent.innerHTML = content;
+                        const div = document.createElement("div")
+                        div.innerHTML = content.trim(); 
+                        mainContent.html(div);                             
+                        
                         const curActive = link.closest("ul.menu").querySelector("li.active");
                         if (curActive != undefined && curActive != elm){
                             curActive.classList.remove("active")              
                         }
-                        link.parentNode.classList.add("active");      
+                        
                         if (isMobile) s.hide();
+
+                        link.parentNode.classList.add("active");  
                     });
 
                 }                
@@ -59,11 +64,9 @@ const SideBar = function(elm) {
     }
     
     this.hide = () =>{
-        this.elm.style.marginLeft = this.defaultStyle.marginLeft;
         content.classList.remove("sidebar-open");
     }
     this.show = () => {
-        this.elm.style.marginLeft = 0
         content.classList.add("sidebar-open");
     }
 
