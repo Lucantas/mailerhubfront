@@ -1,5 +1,10 @@
-<div id="sidebar" class="sidebar overflow-y-auto col-xs-10 bg-blue z-index-6">
-   <div class="menu-flex">
+<div id="sidebar" class="sidebar overflow-y-auto col-xs-10 bg-blue z-index-6 pad-0">
+    <div class="bg-blue row m-0 z-index-6 close-menu-button d-flex flex-row-reverse">
+        <div id="hideSidebar">
+            <i class="fas fa-arrow-left fa-2x c-white"></i>
+        </div>
+    </div>
+    <div class="menu-flex">
         <div class="logo">
             <figure class="img-container">
                 <img class="fit-width" src="img/0.jpeg" alt="">
@@ -8,29 +13,29 @@
         <ul class="menu list-unstyled">
             {{ range $.Site.Data.components }}
                 {{ range .menu }}
-                {{ $name := .name }}
-                {{ $label := .label }}
-                <li class="menu-item {{ if (isset .sublist 0) }} has-children {{ end }}">
-                    <a class="c-white" href="templates/{{ $name }}/load">{{ $label }}
-                    {{ if (isset .sublist 0) }}
-                    <i class="fas fa-chevron-down arrow c-white"></i>
-                    
-                    </a>
-                    <ul class="list-unstyled sublist bg-black">                            
-                        {{ range .sublist}}
+                    {{ $name := .name }}
+                    {{ $label := .label }}
+                    <li class="menu-item {{ if (isset .sublist 0) }} has-children {{ end }}">
+                        <a class="c-white" href="templates/{{ $name }}/load">{{ $label }}
+                            {{ if (isset .sublist 0) }}
+                            <i class="fas fa-chevron-down arrow c-white"></i>
+
+                        </a>
+                        <ul class="list-unstyled sublist bg-black">
+                            {{ range .sublist}}
                             <li class="c-white menu-item">
                                 <a class="c-white" href="templates/{{ $name }}/load-{{ .name }}">
                                     {{ .label }}
                                 </a>
                             </li>
+                            {{ end }}
+                        </ul>
+                        {{ else }}
+                        </a>
                         {{ end }}
-                    </ul>
-                    {{ else }}
-                    </a>
-                    {{ end }}
-                </li>
+                    </li>
                 {{ end }}
-            {{ end }} 
+            {{ end }}
         </ul>
-   </div>
+    </div>
 </div>
