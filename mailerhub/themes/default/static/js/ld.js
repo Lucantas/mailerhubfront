@@ -31,3 +31,20 @@ HTMLElement.prototype.childrenHeight = function(){
        return 0;
    }
 }
+
+HTMLElement.prototype.html = function(elm){
+	if (elm == undefined) {
+		return this.innerHTML; 	
+	}
+	this.innerHTML = "" 
+    this.appendChild(elm);
+
+    const scripts = elm.getElementsByTagName("script");
+
+    if (scripts.length){
+        scripts.toArray().forEach((script) => {
+            eval(script.innerHTML);
+        })
+    }
+
+}
